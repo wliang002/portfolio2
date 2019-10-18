@@ -1,0 +1,114 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        box-sizing: inherit;
+        display: inline-block;
+        transition: all .3s;
+        cursor: pointer;       
+    }
+
+
+    &--popup {
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        font-size: 1.5rem;
+
+        &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.21);
+        }
+        &:active {
+            transform: translateY(-0.1rem);
+            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.21);
+        }
+    }
+
+    &--white {
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        background-color: $color-white;
+        color: $color-grey-1;
+
+        &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.21);
+        }
+        &:active {
+            transform: translateY(-0.1rem);
+            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.21);
+        }
+    }
+
+    &--blue {
+        padding: 1rem 3rem;
+        border: 2px solid $color-white;
+        font-size: 1.5rem;
+        color: $color-white; 
+
+        &_arrow {
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+
+        &:hover {
+            background-color: rgba($color-blue-light-2, .6);
+            border: 2px solid rgba($color-blue-light-2, .6);
+            box-shadow: 0 1rem 20px rgba($color-black, 0.2);
+            transform: translateY(-.3rem);
+        }
+
+        &:active,
+        &:focus {
+            transform: translateY(-.1rem);
+            box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+        }
+    }
+    
+}
+
+
+
+.btn-text {
+    &:link,
+    &:visited {
+        
+        display: inline-block;
+        text-decoration: none;
+        // border-bottom: 1px solid $color-blue-green;
+        padding: 3px;
+        font-size: 1.4rem;
+        transition: all .2s;
+        
+    }
+
+    &-1 {
+        color: $color-blue-green;
+        &:hover {
+            background-color: $color-blue-green;
+        }
+    }
+
+    &-2 {
+        color: $color-purple-dark;
+
+        &:hover {
+            background-color: $color-purple-dark;
+        }
+    }
+
+    &:hover {
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(-2px); 
+    }
+
+    &:active {
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+        transform: translateY(0); 
+    }
+}
+

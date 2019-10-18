@@ -1,0 +1,51 @@
+// center a block
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // shift the center from 0 0 to middle x y cord
+    transform: translate(-50%, -50%);
+}
+
+// clearfix 
+@mixin clearfix {
+    &::after {
+        content: "";
+        // clear both left and right loat
+        clear: both;
+        display: table;
+    }
+}
+
+// media query manager
+/*
+0   - 600px;        phone                    max-width
+600 - 900px;        tablet portrait          max-width
+900 - 1200px;       tablet landscape         max-width
+[1200 -1800px]      desktop first, our normal styles apply
+1800px + ;          Big desktop              min-width
+
+$breakpoint arguement chices:
+ - phone 
+ - tab-port
+ - tab-land
+ - big-desktop
+
+ ORDER: base + typography > general layout + grid > page layout > components
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        // only apply to screens (media query won't work for print out)
+        @media only screen and (max-width: 37.5em) { @content };      //600px  600/16px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };      //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };     //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };     //1800px
+    }
+}

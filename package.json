@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "liveserver": "live-server",
+    "start": "npm-run-all --parallel liveserver watch:sass"
+  },
+  "author": "Weixin Liang",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

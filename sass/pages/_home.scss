@@ -1,0 +1,22 @@
+.section-about {
+    background-color: $color-grey-light;
+    padding: 10rem 0;
+    
+}
+
+.section-skills {
+    padding: 10rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-blue-dark, .6),
+        rgba($color-blue-light-2, .8)
+    ),
+    url(../img/city.jpg);
+    background-size: cover;
+}
+
+.section-projects {
+    background-color: $color-grey-light;
+    padding: 10rem 0 15rem 0;
+    
+}

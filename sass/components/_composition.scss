@@ -1,0 +1,51 @@
+.composition { 
+    position: relative;
+
+    &__shape {
+        width: 28rem;
+        height: 28rem;
+        overflow: hidden;
+        border-radius: 50%;    
+        position: absolute;
+        left: 15rem;
+        top: 0;
+    }
+    &__photo {
+        width: 100%;
+        border-radius: 30rem;
+        // flip image
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        transition: all .3s;
+       
+    }
+    &__caption {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        // the caption is at the bottom before hover
+        transform: translate(-50%, 10%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        //fix animation clitch
+        backface-visibility: hidden;
+        letter-spacing: .5rem;
+    }
+    
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__photo {
+        border-radius: 30rem;
+        transform: scaleX(-1) scale(.95);
+        filter: blur(2px) brightness(80%);
+    }
+
+}

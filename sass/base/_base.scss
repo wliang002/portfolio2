@@ -1,0 +1,20 @@
+// basic reset, clear margin, padding
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // set root font-size and make 1rem = 10px
+    font-size: 62.5%;
+
+}
+
+// add some padding for the whole page
+body {
+    box-sizing: border-box;
+    padding: 0 2.5rem;
+}
